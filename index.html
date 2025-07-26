@@ -21,6 +21,10 @@
     var view = new Marzipano.RectilinearView({ yaw: 0, pitch: 0, fov: Math.PI / 2 });
     var scene = viewer.createScene({ source, geometry, view });
     scene.switchTo();
+setTimeout(() => {
+  window.dispatchEvent(new Event('resize'));
+}, 60);
+
   </script>
 </body>
 </html>
